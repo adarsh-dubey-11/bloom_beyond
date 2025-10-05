@@ -1,0 +1,103 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Bloom & Beyond — light theme */
+    --background: 0 0% 100%;
+    --foreground: 234 18% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 234 18% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 234 18% 12%;
+
+    /* Vibrant floral rose */
+    --primary: 334 74% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft leafy mint for subtle surfaces */
+    --secondary: 152 31% 94%;
+    --secondary-foreground: 156 25% 20%;
+
+    /* Gentle peach accent for highlights */
+    --accent: 30 100% 92%;
+    --accent-foreground: 20 80% 22%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 28% 90%;
+    --input: 216 28% 90%;
+    --ring: 334 74% 57%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar tokens aligned to brand */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 234 18% 12%;
+    --sidebar-primary: 334 74% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 152 31% 94%;
+    --sidebar-accent-foreground: 156 25% 20%;
+    --sidebar-border: 216 28% 90%;
+    --sidebar-ring: 334 74% 57%;
+  }
+
+  .dark {
+    /* Bloom & Beyond — dark theme */
+    --background: 234 18% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 234 18% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 234 18% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 334 74% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 156 16% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 24 86% 22%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 234 14% 22%;
+    --input: 234 14% 22%;
+    --ring: 334 74% 60%;
+
+    --sidebar-background: 234 18% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 334 74% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 156 16% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 234 14% 22%;
+    --sidebar-ring: 334 74% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
